@@ -1,0 +1,14 @@
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: solid 1px #c6c1c1;
+    height: 85px;
+    z-index: 1;
+    background-image: url(./resources/header_background.jpg);
+}
