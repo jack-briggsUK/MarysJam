@@ -1,14 +1,119 @@
 html {
     font-family: 'Lato', sans-serif;
+    color: hsla(181, 25%, 87%, 1);
 }
 
+body {
+    background-color: hsla(0, 100%, 5%, 1);
+}
+/* Header section;
+Background of jam pan with logo in top left - flex-box links */
+
 header {
-    display: flex;
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     top: 0;
+    left: 0;
     width: 100%;
     border-bottom: solid 1px #c6c1c1;
-    height: 85px;
-    z-index: 1;
-    background-image: url(./resources/header_background.jpg);
+    height: 100px;
+    background-image: url("./resources/header_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: larger;
+}
+
+header a {
+    color: white;
+}
+
+.logo {
+    display: flex;
+    padding-left: 20px;
+}
+
+.nav {
+    display: flex;
+    width: 60%;
+    justify-content: right;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav a {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*Content section;
+Coloum containers with flex-box inside */
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(11, 10%);
+    grid-template-rows: repeat(10,);
+}
+
+/*About me */
+.aboutMe {
+    grid-column: 4 / 8;
+    grid-row: 1 / 5;
+}
+
+.aboutMe img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.bio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bio .name {
+    width: 100%;
+    text-align: center;
+}
+
+/*Jams */
+
+.jams {
+    padding-top: 120px;
+    grid-row-start: 5 / 8;
+    grid-column: 2 / 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.jam {
+    max-height: 600px;
+    max-width: 400px;
+    object-fit: contain;
+}
+
+.jam img {
+    max-height: 70%;
+    max-width: 100%;
+}
+
+/*Prices */
+
+.prices {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    grid-row-start: 6;
+    grid-column: 3 / 9;
+    justify-content: center;
+}
+
+table, th, td {
+    border: 1px solid white;
+}
+
+table {
+    width: 70%;
 }
